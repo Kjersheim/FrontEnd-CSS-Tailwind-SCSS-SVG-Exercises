@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <title>Grid Testing</title>
+    <style>
+        body{
+    color: #fff;
+    font-family: "Nunito Semibold";
+    text-align: center;
+}
+
+#content{
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    /* grid-template-columns: 30% 20% 50%;
+    grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+}
+#content div{
+    background: #3bbced;
+    padding: 30px;
+}
+#content div:nth-child(even){
+    background: #777;
+}
+    </style>
+</head>
+<body>
+   <div id="content">
+       <div>1</div>
+       <div>2</div>
+       <div>3</div>
+       <div>4</div>
+       <div>5</div>
+       <div>6</div>
+       <div>7</div>
+       <div>8</div>
+       <div>9</div>
+   </div>
+</body> 
+</html>
+
+<!-- <header>Header</header>
+<main>Main</main>
+<aside>Aside</aside>
+<nav>Nav</nav>
+<footer>Footer</footer> -->

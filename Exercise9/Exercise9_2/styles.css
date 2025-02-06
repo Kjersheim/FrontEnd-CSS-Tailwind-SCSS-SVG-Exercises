@@ -1,0 +1,179 @@
+/* General */
+html, body {
+    height: 100%;
+    margin: 0 auto;
+    background-color:#f9fafb;
+    font-family: "Noto Sans", sans-serif;
+    width: 90%;
+    overflow: visible;
+}
+.main_headline {
+    font-family: "Oswald", sans-serif;
+    margin: 3rem;
+}
+section {
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ddd;
+    overflow: visible;
+    position: relative;
+}
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+section p {
+    font-size: 16px;
+    color: #555;
+}
+/* Part One: Button Styling */
+.part_one svg {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    opacity: 1;
+    transition: transform 0.4s ease-in-out; 
+}
+.part_one svg .oneb {
+    transition: fill 0.4s ease;
+}
+.part_one svg .oned {
+    opacity: 0.3;
+    transition: opacity 0.6s ease; 
+}
+/* Hover States */
+.part_one svg:hover {
+    transform: scale(1.02);  
+}
+.part_one svg:hover .oneb {
+    fill: #dc7153;
+}
+.part_one svg:hover .oned {
+    opacity: 1;
+}
+/* Active States */
+.part_one svg:active {
+    transform: scale(0.98);
+}
+.part_one svg:active .onec {
+    fill: #b80c0c; 
+}
+.part_one svg:active .oned{
+    opacity: 0.3;
+}
+
+
+/* Part Two: Animated Objects */
+.part_two {
+    background-color: #fff;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ddd;
+}
+/* Hiding the white border around the SVGs */
+.b {
+    display: none;
+}
+
+/* SQUARE */
+.c {
+    animation: mySquare 10s infinite ease-in-out;
+    transform-origin: top right;
+}
+@keyframes mySquare {
+    0% {
+        transform: translate(0, 0) scale(1);
+
+    }
+    25% {
+        transform: translate(0, 40%) scale(1, 1.25);
+    
+    }
+    50% {
+        transform: translate(0, 60%) scale(3, 0.75);
+    }
+    75% {
+        transform: translate(0, 50%) scale(1);
+        fill: #29cb72;
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        fill: #4a82dd;
+    }
+}
+
+/* STAR */
+.a {
+    animation: myStar 4s infinite ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes myStar {
+    0% {
+        opacity: 1;
+        fill: #f4e16e;
+        filter: drop-shadow(0 0 5px rgba(244, 225, 110, 0.3))
+                drop-shadow(0 0 10px rgba(244, 225, 110, 0.4));
+    }
+    25% {
+        opacity: 0.95;
+        fill: #f7c75b;
+        filter: drop-shadow(0 0 8px rgba(247, 199, 91, 0.35))
+                drop-shadow(0 0 12px rgba(247, 199, 91, 0.45));
+    }
+    50% {
+        opacity: 0.9;
+        fill: #ffae42;
+        filter: drop-shadow(0 0 10px rgba(255, 174, 66, 0.4))
+                drop-shadow(0 0 15px rgba(255, 174, 66, 0.6));
+    }
+    75% {
+        opacity: 0.95;
+        fill: #f7c75b;
+        filter: drop-shadow(0 0 8px rgba(247, 199, 91, 0.35))
+                drop-shadow(0 0 12px rgba(247, 199, 91, 0.45));
+    }
+    100% {
+        opacity: 1;
+        fill: #f4e16e;
+        filter: drop-shadow(0 0 5px rgba(244, 225, 110, 0.3))
+                drop-shadow(0 0 10px rgba(244, 225, 110, 0.4));
+    }
+}
+
+/* CIRCLE */
+.d {
+    animation: myCircle 10s infinite ease-in-out reverse;
+    transform-origin: left;
+}
+
+@keyframes myCircle {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    20% {
+        transform: translate(-5%, 0) scale(0.6);
+    }
+    40% {
+        transform: translate(50%, -50%) scale(0.8);
+    }
+    60% {
+        transform: translate(50%, -50%) scale(0.5);
+    }
+    80% {
+        transform: translate(-5%, 0) scale(0.4);
+    }
+    100% {
+        transform: translate(-5%, 0) scale(1);
+    }
+}

@@ -1,0 +1,91 @@
+@use '../variables';
+@use '../functions';
+
+//mixing isntead of using the same code in both buttons 
+// #e2e2e2 default value
+@mixin btn($bg-color: #e2e2e2) {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    padding: variables.$base-padding variables.$base-padding * 2;
+    border-radius: variables.$base-border-radius;
+    background-color: $bg-color;
+  }
+  
+  .btn {
+    @include btn;
+  }
+  
+  @each $key, $val in variables.$colors {
+    .btn-#{$key} {
+      @include btn($val);
+      &:hover {
+        background-color: lighten($val, 5);
+      }
+    }
+    .btn-outlined-#{$key} {
+      @include btn(#fff);
+      border: variables.$base-border-thickness solid $val;
+      &:hover {
+        background-color: $val;
+      }
+    }
+    .btn-complement-#{$key} {
+      @include btn($val);
+      color: light-comp($val);
+      &:hover {
+        color: $val;
+        background-color: light-comp($val);
+      }
+    }
+  }
+
+
+
+//mixing isntead of using the same code in both buttons
+// @mixin btn(){
+//     text-decoration: none;
+//     cursor: pointer;
+//     display: inline-block;
+//     border: 0;
+//     padding: variables.$base-padding variables.$base-padding * 2;
+//     border-radius: variables.$base-border-radius;
+// }
+
+// @each $key, $val in variables.$colors {
+//     .btn-#{$key} {
+//         @include btn();
+//         background-color: $val;
+//     }
+//     .btn-outlined-#{$key}{
+//         @include btn();
+//         background-color: #fff;
+//         border: variables.$base-border-thickness solid $val;
+//     }
+// }
+
+
+
+
+// @each $key, $val in variables.$colors {
+//     .btn-#{$key} {
+//         text-decoration: none;
+//         cursor: pointer;
+//         display: inline-block;
+//         border: 0;
+//         padding: variables.$base-padding variables.$base-padding * 2;
+//         border-radius: variables.$base-border-radius;
+//         background-color: $val;
+//     }
+//     .btn-outlined-#{$key}{
+//         text-decoration: none;
+//         cursor: pointer;
+//         display: inline-block;
+//         border: 0;
+//         padding: variables.$base-padding variables.$base-padding * 2;
+//         border-radius: variables.$base-border-radius;
+//         background-color: #fff;
+//         border: variables.$base-border-thickness solid $val;
+//     }
+// }

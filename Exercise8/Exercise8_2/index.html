@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- NAVBAR -->
+    <nav class="bg-orange-500 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Flex container for the navbar -->
+            <div class="flex justify-between items-center h-16">
+                <!-- //Kjersheim -->
+                <div class="flex items-center">
+                    <p class="text-xl font-bold text-gray-900">//Kjersheim</p>
+                </div>
+                <!-- nav for medium/large screens-->
+                <div class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">Home</a>
+                    <a href="./about.html" class="text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">About</a>
+                    <a href="./contact.html" class="text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">Contact</a>
+                </div>
+                <!-- menu button for mobile screens-->
+                <div class="md:hidden">
+                    <button id="menu-button" type="button" class="text-gray-800 hover:text-slate-50 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+                </div>
+            </div>
+            <!-- mobile menu, hidden on large screens, .menu-transition from css sheet-->
+            <div id="mobile-menu" class="md:hidden menu-transition max-h-0 overflow-hidden">
+                <a href="./index.html" class="block px-4 py-2 text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">Home</a>
+                <a href="./about.html" class="block px-4 py-2 text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">About</a>
+                <a href="./contact.html" class="block px-4 py-2 text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- MAIN SECTION -->
+    <main class="flex-grow">
+        <!-- CONTENT -->
+        <h1 class="mt-8 text-6xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-bold text-gray-800 leading-tight">
+            Tips & Tricks in Ludo
+        </h1>
+        <!-- Top grid container for first section, switching number of columns mobile/medium/large-->
+        <section class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Container for intro text -->
+            <div class="order-1 lg:col-span-2">
+                <div class="mx-auto">
+                    <p class="mt-4 text-xl md:text-lg text-gray-600 leading-relaxed">
+                        This first section Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod excepturi veniam eligendi eaque libero vero maiores, at suscipit ducimus debitis.
+                    </p>
+                </div>
+                <div class="mx-auto">
+                    <p class="mt-4 text-xl md:text-lg text-gray-600 leading-relaxed">
+                        Secondly, we are diving into Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt molestiae cupiditate enim tempora modi officia fugit at tempore debitis esse eaque, laudantium quibusdam facere non.
+                    </p>
+                </div>
+            </div>
+            <!-- Discord Image, only scaling size -->
+            <div class="order-2 lg:order-3 mx-auto">
+                <img src="./images/discord.svg" alt="Discord Icon" class="max-w-[100px] md:max-w-[200px] mx-auto">
+            </div>
+        </section>
+        <!-- ARTICLES -->
+        <section class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col">
+                <h2 class="text-3xl font-bold text-gray-800 leading-tight">
+                    The first headline in an article
+                </h2>
+            </div>
+            <div class="flex flex-col">
+                <!-- Quickfix, empty second colum on headline row -->
+            </div>
+            <div class="flex flex-col">
+                <!-- On paragraphs, generally margins (also from the css file) adding suggested font size as well as 
+                 height and color contrast strong enough to be easily readable-->
+                <p class="mt-4 text-xl md:text-lg text-gray-900 leading-relaxed">
+                    For the first time Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id ipsum facilis veritatis sed. Quasi, repellat! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint earum consectetur excepturi deserunt, molestiae qui rerum labore optio eveniet dicta provident distinctio, reprehenderit delectus amet nostrum incidunt similique itaque repellat quo cum tenetur! Distinctio, dolorum.
+                </p>
+                <p class="mt-4 text-xl md:text-lg text-gray-900 leading-relaxed">
+                    Continuing, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas aliquid odio quisquam hic magni voluptatibus quibusdam deserunt necessitatibus quos? Officiis explicabo minus quod similique, veritatis iusto quis dignissimos culpa ipsa nihil, harum pariatur sit illo.
+                </p>
+            </div>
+            <div class="relative flex flex-col">
+                <p class="mt-4 text-2xl md:text-lg text-gray-900 leading-relaxed">
+                    For the second time Lorem, ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae eum quos nam. Deleniti, asperiores?
+                </p>
+                <!-- The image container will get borders on top and bottom for small screens, instead of making the image tiny -->
+                <picture class="absolute inset-0 z-[-1] opacity-20 max-h-[400px] border-t-4 border-b-4 border-gray-400 md:border-none">
+                    <!-- Some options for image source/size, defaulting the small -->
+                    <source media="(min-width: 1024px)" srcset="./images/octopus-7762800_1280.png">
+                    <source media="(min-width: 768px)" srcset="./images/octopus-7762800_640.png">
+                    <img src="./images/octopus-7762800_640.png" alt="Octopus" class=" md:object-contain bg-center bg-no-repeat object-cover w-full h-full">
+                </picture>
+            </div>            
+        </section>
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700">
+        <section class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- First row: Headline in the first column, empty in the second column -->
+            <div class="flex flex-col">
+                <h2 class="text-3xl font-bold text-gray-800 leading-tight">
+                    Very interesting findings
+                </h2>
+            </div>
+            <div class="flex flex-col">
+                <!-- This can be empty or contain any visual alignment element -->
+            </div>
+            <!-- Second row: Paragraphs in both columns -->
+            <div class="flex flex-col">
+                <p class="mt-4 text-xl md:text-lg text-gray-900 leading-relaxed">
+                    For a different topic, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ullam inventore et veritatis, quae non quis repudiandae architecto eligendi ipsam, eius iste ipsa, illum ex nobis deleniti esse temporibus at.
+                </p>
+                <p class="mt-4 text-xl md:text-lg text-gray-900 leading-relaxed">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo id, temporibus libero nemo, repellendus voluptatem ipsam hic sed adipisci eos culpa nisi alias odio, labore commodi sint suscipit cum. Reprehenderit eos aliquam delectus quod odio!
+                </p>
+            </div>
+
+            <div class="relative flex flex-col">
+                <p class="mt-4 text-xl md:text-lg text-gray-900 leading-relaxed">
+                    Lastly, this is Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut asperiores facere voluptatem aliquid dicta saepe vero quaerat, accusantium animi sunt provident unde, eligendi ipsa nemo ipsum necessitatibus! Nihil a nulla ullam consectetur deserunt at eos rerum, necessitatibus sint vero voluptates placeat perferendis aut, iste repudiandae.
+                </p>
+            </div>
+        </section>
+        <hr class=" w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-100">
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-orange-500 text-gray-700 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <!-- flex container for the footer, column for mobile and row with items at flex start, 
+             justify-between(content and space between) the text for medium+ -->
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl md:text-xl font-bold"> Socials: </h2>
+                    <ul class="mt-4 flex space-x-4">
+                        <li class="mt-4 mb-2">
+                            <a href="https://www.linkedin.com/in/kjersheim" target="_blank" class="flex items-center text-gray-700 hover:text-gray-100">
+                                <img src="./images/linkedin logo_icon.svg" alt="LinkedIn" class="h-6 w-6 inline">
+                                <span class="ml-2">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="mt-4 mb-2">
+                            <a href="https://mastodon.social/@Kjersheim" target="_blank" class="flex items-center text-gray-700 hover:text-gray-100">
+                                <img src="./images/mastodon_icon.svg" alt="Mastodon" class="h-6 w-6 inline">
+                                <span class="ml-2">Mastodon</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- some text about the page, center but left aligned when space-between from the above applies on md+ -->
+                <div class="text-center md:text-left">
+                    <p class="text-lg md:text-sm">Testing Tailwind @Kjersheim</p>
+                    <p class="mt-2 text-lg md:text-sm">© 2024 //Kjersheim. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

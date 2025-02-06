@@ -1,0 +1,24 @@
+// @import for sass is deprecating
+// The order of import does matter. Since variables is imported before the base,
+// I can use the variables in the base module.
+
+// variables & functions
+@import './functions';
+@import './variables';
+
+// base & layout
+@import './base';
+@import 'breakpoints';
+@import 'grid';
+
+// colors
+@import './colors';
+
+// components (button, card, navbar)
+@import './components/card';
+@import './components/button';
+@import './components/navbar';
+
+// utilities (margin, padding, opacity)
+
+@import './utilities'

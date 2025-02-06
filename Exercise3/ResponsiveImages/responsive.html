@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <title>Responsive Design</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body>
+    <div class='page'>
+      <div class='section menu'></div>
+      <!-- HEADER -->
+      <!-- Screen Width Optimization Using srcset-->
+      <!-- <div class='section header'>
+        <div class='photo'>
+          <img src='images/photo-small.jpg'
+               srcset='images/photo-big.jpg 2000w,
+                       images/photo-small.jpg 1000w'
+               sizes='(min-width: 960px) 960px,
+                      100vw'/>
+        </div>
+      </div>       -->
+
+      
+      <!--  Art Direction Using <picture>. This is where the tutorial ended. -->
+      <!-- <div class='section header'>
+        <div class='photo'>
+          <picture>
+            <source media='(min-width: 401px)'
+                    srcset='images/photo-big.jpg'/>
+            <source media='(max-width: 400px)'
+                    srcset='images/photo-tall.jpg'/>
+            <img src='images/photo-small.jpg'/>
+          </picture>
+        </div>
+      </div>       -->
+
+      <!-- Testing different sections from the suggestions of the tutorial -->
+      <div class='section header'>
+        <div class='photo'>
+          <picture>
+            <!-- For viewports wider than 960 pixels:
+                 Uses the big image for high DPI screens (DPR set to 2 in dev tools testing, 2x) with a viewport up to 2000 (and over)
+                 Uses the small image for 1x screens with a viewport up to 1000 pixels.
+                 Sizes are specified to use 1200px for viewports 1200px and wider, and 100vw otherwise.
+                 For screens above 2000 pixels the big is still chosen.
+                 If user is using Mozilla Firefox, it is a curious breakpoint on pixel width 961 where the small image is selected even on DPR set to 2. 
+                 However, in Chrome this does not happend, despite accounting for the fact chromium based browsers uses cached images even if the aspects change.
+            -->
+            <source media='(min-width: 961px)'
+                    srcset='images/photo-big.jpg 2000w, images/photo-small.jpg 1000w'
+                    sizes='(min-width: 1200px) 1200px, (min-width: 961px) 100vw, 100vw'/>
+            <!-- Between 401 and 960 pixels, it uses the big image if the viewport x DPI exceeds 1000 pixels 
+                 (aka in this test between 400 and 500 pixels, because 2 x 500 = 1000)
+                 On regular 1x screens it choses the small image beetween 401 and 1000 pixels viewport width.
+                 While I am still not 100% sure how the sizes work, and removing it here does no difference, but
+                 according to MDN web docs the sizes attribute define the image size relative to the viewport width.  
+            -->
+                    <source media='(min-width: 401px) and (max-width: 960px)'
+                    srcset='images/photo-big.jpg 2000w, images/photo-small.jpg 1000w'
+                    sizes='(min-width: 600px) 100vw, 100vw'/>
+            <!--  For the smallest viewports with a max width of 400 pixels, I chose to use the tall image in both 2x and 1x as I did not 
+                  have a smaller version, and wanted to keep the same functionality as before. The sizes are specified to use 100 viewwidth(within its container).
+            -->
+                    <source media='(max-width: 400px)'
+                    srcset='images/photo-tall.jpg 2x, images/photo-tall.jpg 1x'
+                    sizes='100vw'/>
+            <!-- Fallback image if <picture> is not supported by the browser, 
+                 uses the small image as the default image. -->
+            <img src='images/photo-small.jpg' alt='Small default photo'/>
+          </picture>
+        </div>
+      </div>
+      
+      <!-- CONTENT -->
+      <div class='section content'>
+        <div class='illustration'>
+          <img src='illustration-small.png'
+               srcset='images/illustration-small.png 1x,
+                       images/illustration-big.png 2x'
+               style='max-width: 500px'/>
+        </div>        
+      </div>        
+      <div class='section sign-up'>
+        <img src='images/sign-up.svg'/>
+      </div>
+      <div class='section feature-1'>
+        <img src='images/feature.svg'/>
+      </div>
+      <div class='section feature-2'>
+        <img src='images/feature.svg'/>
+      </div>
+      <div class='section feature-3'>
+        <img src='images/feature.svg'/>
+      </div>
+    </div>    
+  </body>
+</html>

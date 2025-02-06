@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="493.17429"
+   height="493.17435"
+   viewBox="0 0 130.4857 130.48571"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="HDL-logo.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="HDL-logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="156.2706"
+     inkscape:cy="322.08714"
+     inkscape:window-width="2560"
+     inkscape:window-height="1521"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.1357405,-0.71642653)">
+    <path
+       id="path3"
+       style="display:inline;fill:#17da69;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.2;stroke-dasharray:none"
+       d="M 66.378595,1.8164266 A 64.1427,64.1427 0 0 0 2.2357405,65.959281 64.1427,64.1427 0 0 0 66.378595,130.10214 64.1427,64.1427 0 0 0 130.52145,65.959281 64.1427,64.1427 0 0 0 66.378595,1.8164266 Z m 0,14.3939534 A 49.749023,49.749023 0 0 1 116.12749,65.959281 49.749023,49.749023 0 0 1 66.378595,115.70818 49.749023,49.749023 0 0 1 16.629694,65.959281 49.749023,49.749023 0 0 1 66.378595,16.21038 Z" />
+    <path
+       style="font-size:8.14939px;line-height:0;font-family:Impact;-inkscape-font-specification:Impact;white-space:pre;fill:#f7903c;fill-rule:evenodd;stroke:#000000;stroke-width:0.0673032;stroke-linecap:round;stroke-linejoin:round"
+       d="m -192.81975,46.798306 v 6.442316 h -1.67524 V 50.53477 h -0.50138 v 2.705852 h -1.67524 v -6.442316 h 1.67524 v 2.303954 h 0.50138 v -2.303954 z"
+       id="text4"
+       inkscape:label="H"
+       transform="matrix(8.1997514,0,0,11.019554,1621.4505,-484.54851)"
+       aria-label="H" />
+    <path
+       style="font-size:13.8112px;line-height:0;font-family:Impact;-inkscape-font-specification:Impact;white-space:pre;fill:#f7903c;fill-rule:evenodd;stroke:#000000;stroke-width:0.132795;stroke-linecap:round;stroke-linejoin:round"
+       d="m -196.43938,44.575378 h 2.12428 q 2.05684,0 2.77842,0.188825 0.72833,0.188825 1.10598,0.620425 0.37765,0.4316 0.47206,0.964356 0.0944,0.526013 0.0944,2.077075 v 3.823706 q 0,1.470138 -0.14162,1.969175 -0.13487,0.492294 -0.4788,0.775532 -0.34393,0.276493 -0.84972,0.391137 -0.50578,0.1079 -1.52408,0.1079 h -3.58093 z m 2.83911,1.868018 v 7.182094 q 0.61369,0 0.7553,-0.242775 0.14162,-0.249518 0.14162,-1.342006 V 47.79889 q 0,-0.741812 -0.0472,-0.950868 -0.0472,-0.209057 -0.2158,-0.303469 -0.1686,-0.101157 -0.63392,-0.101157 z"
+       id="text4-6"
+       inkscape:label="D"
+       transform="matrix(4.7536826,0,0,6.6179063,988.84253,-265.16398)"
+       aria-label="D&#10;" />
+    <path
+       style="font-size:16.0784px;line-height:0;font-family:Impact;-inkscape-font-specification:Impact;white-space:pre;fill:#f7903c;fill-rule:evenodd;stroke:#000000;stroke-width:0.132795;stroke-linecap:round;stroke-linejoin:round"
+       d="m -193.04121,43.512167 v 10.166762 h 2.0098 v 2.543653 h -5.31498 V 43.512167 Z"
+       id="text4-6-0"
+       inkscape:label="L"
+       transform="matrix(4.560232,-0.02256914,0.01525317,5.6807077,994.23694,-221.69409)"
+       aria-label="L" />
+    <path
+       d="m 96.717874,64.352074 v 8.185547 h -7.56543 v -8.185547 z"
+       id="text76"
+       style="font-size:50.8px;line-height:0;font-family:Impact;-inkscape-font-specification:Impact;fill:#17da69;fill-rule:evenodd;stroke:#000000;stroke-width:0.582083;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:label="Right-dot"
+       aria-label="." />
+    <path
+       d="m 50.964925,64.352074 v 8.185547 h -7.565429 v -8.185547 z"
+       id="text76-8"
+       style="font-size:50.8px;line-height:0;font-family:Impact;-inkscape-font-specification:Impact;fill:#17da69;fill-rule:evenodd;stroke:#000000;stroke-width:0.582083;stroke-linecap:round;stroke-linejoin:round"
+       inkscape:label="Left-dot"
+       aria-label="." />
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+https://practicaltypography.com/summary-of-key-rules.html
+
+Summary of key rules
+
+    The four most important typographic considerations for body text are point size, line spacing, line length, and font (see font recommendations), because those choices determine how the body text looks.
+
+    Point size should be 10–12 points in printed documents, 15-25 pixels on the web.
+
+    Line spacing should be 120–145% of the point size.
+
+    The average line length should be 45–90 characters (including spaces).
+
+    The easiest and most visible improvement you can make to your typography is to use a professional font, like those found in font recommendations.
+
+    Avoid goofy fonts, monospaced fonts, most free fonts, and system fonts—especially Times New Roman and Arial.
+
+    Use curly quotation marks, not straight ones (see straight and curly quotes).
+
+    Use bold or italic as little as possible, and not together.
+
+    Never underline, except perhaps for web links.
+
+    All caps are fine for less than one line of text.
+
+    Use centered text sparingly.
+
+    Put only one space between sentences.
+
+    Don’t use multiple word spaces or other white-space characters in a row.
+
+    If you don’t have real small caps, don’t use them at all.
+
+    Use 5–12% extra letterspacing with all caps and small caps.
+
+    Kerning should always be turned on.
+
+    Use first-line indents that are one to four times the point size of the text, or use 4–10 points of space between paragraphs. Don’t use both.
+
+    Always use hyphenation with justified text.
+
+    Don’t confuse hyphens and dashes, and don’t use multiple hyphens as a dash.
+
+    Use ampersands sparingly, unless included in a proper name.
+
+    Use proper trademark and copyright symbols—not alphabetic approximations.
+
+    In a document longer than three pages, one exclamation point is plenty (see question marks and exclamation points).
+
+    Put a nonbreaking space after paragraph and section marks.
+
+    Make ellipses using the proper character, not periods and spaces.
+
+    Apostrophes point downward.
+
+    Make sure foot and inch marks are straight, not curly.
+

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #f9fafb; 
+}
+
+h1, h2 {
+    font-family: "Oswald", sans-serif;
+}
+
+/* adding some text decoration on the links*/
+a {
+    text-decoration: underline;
+    text-underline-offset: 2px; 
+    text-decoration-thickness: 1px; 
+}
+
+/* margin bottom to each p on default */
+p {
+    margin-bottom: 1rem; 
+}
+.menu-transition {
+    transition: max-height 0.3s ease-out;
+}

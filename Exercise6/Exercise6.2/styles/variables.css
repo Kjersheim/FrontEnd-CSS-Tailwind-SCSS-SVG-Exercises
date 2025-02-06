@@ -1,0 +1,20 @@
+:root {
+    --headline-font: 'Raleway', sans-serif;
+    --body-font: 'Roboto', Arial, Helvetica, sans-serif;
+    --main-title-color: #333;
+    --font-size-xl: clamp(2.5em, 8vw + 1em, 8em); /* Scalable main heading test, minimum 2.5em, 8 viewwidth + 1em, max 8em */
+    --main-title-margin: 20px;
+    --main-title-padding: 10px;
+}
+
+.card {
+    --card-width: 100%;
+    --card-bg-color: #ddd;
+    --card-main-color: rgba(50, 236, 249, 0.651);
+    --card-padding: 1em 1.25em; /* Changed it to em to test, scales with default root size*/
+    --card-margin: 15px;
+    --card-shadow-h-offset: 10px;
+    --card-shadow-v-offset: 5px;
+    --card-shadow-blur: 5px;
+    --card-text-wrap-balanced: balance;
+}

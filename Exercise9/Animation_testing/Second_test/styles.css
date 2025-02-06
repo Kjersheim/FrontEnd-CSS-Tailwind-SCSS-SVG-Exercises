@@ -1,0 +1,35 @@
+body {
+    padding: 50px;
+}
+
+.box {
+    display: inline-block;
+    background:pink;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /* long version below(diff properties though)
+     shorthand -->animation: myframes 2s ease-in-out 0s infinite; */
+    animation-name: myframes;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+    &.is-paused {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes myframes {
+    0% {
+        transform: scale(0) rotate(30deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 100;
+    }
+}

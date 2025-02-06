@@ -1,0 +1,22 @@
+pages:
+  stage: deploy
+  image: node:lts # Adding a Node.js image with npm preinstalled
+  script:
+  # For the other exercises, copying all * recursively and moving it to the public folder. 
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+
+  # For the log-project, building and replacing with the distribute version
+  - cd log-project
+  - npm ci # dependancies
+  - npm run build # building the log-project
+  - rm -rf ../public/log-project # deleting the un-built version
+  - mkdir -p ../public/log-project # creating a new folder for the log-project
+  - cp -r dist/* ../public/log-project # copying the files from the production/distribute folder to the public/log-project
+  - cd ..
+  artifacts:
+    paths:
+    - public
+  tags:
+  - general

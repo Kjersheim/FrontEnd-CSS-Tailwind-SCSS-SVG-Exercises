@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- NAVBAR -->
+    <nav class="bg-orange-500 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Flex container for the navbar -->
+            <div class="flex justify-between items-center h-16">
+                <!-- //Kjersheim -->
+                <div class="flex items-center">
+                    <p class="text-xl font-bold text-gray-900">//Kjersheim</p>
+                </div>
+                <!-- nav for medium/large screens-->
+                <div class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">Home</a>
+                    <a href="./about.html" class="text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">About</a>
+                    <a href="./contact.html" class="text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">Contact</a>
+                </div>
+                <!-- menu button for mobile screens-->
+                <div class="md:hidden">
+                    <button id="menu-button" type="button" class="text-gray-800 hover:text-slate-50 focus:outline-none">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+                </div>
+            </div>
+            <!-- mobile menu, hidden on large screens, .menu-transition from css sheet-->
+            <div id="mobile-menu" class="md:hidden menu-transition max-h-0 overflow-hidden">
+                <a href="./index.html" class="block px-4 py-2 text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">Home</a>
+                <a href="./about.html" class="block px-4 py-2 text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">About</a>
+                <a href="./contact.html" class="block px-4 py-2 text-xl md:text-lg text-gray-900 font-medium hover:text-slate-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- MAIN SECTION -->
+    <main class="flex-grow">
+        <!-- CONTENT -->
+        <!-- card styles -->
+        <section class="max-w-4xl mx-auto mt-12 px-4 sm:px-6 lg:px-8 py-12 bg-gray-100 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
+            <form action="#" method="POST" class="space-y-6">
+                <!-- name -->
+                <div>
+                    <label for="name" class="block text-xl md:text-lg font-medium text-gray-700">Your Name</label>
+                    <div class="mt-1">
+                        <input type="text" id="name" name="name" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Enter your name" />
+                    </div>
+                </div>
+
+                <!-- email -->
+                <div>
+                    <label for="email" class="block text-xl md:text-lg font-medium text-gray-700">Email Address</label>
+                    <div class="mt-1">
+                        <input type="email" id="email" name="email" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Enter your email" />
+                    </div>
+                </div>
+
+                <!-- message field -->
+                <div>
+                    <label for="message" class="block text-xl md:text-lg font-medium text-gray-700">Your Message</label>
+                    <div class="mt-1">
+                        <textarea id="message" name="message" rows="4" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Enter your message"></textarea>
+                    </div>
+                </div>
+
+                <!-- submit button -->
+                <div class="text-center">
+                    <!-- as button instead of submit, not adding a functional button just styling-->
+                    <button type="button" class="text-xl md:text-lg inline-block bg-orange-400 text-white font-semibold py-2 px-4 rounded hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                      Send Message
+                  </button>
+                </div>
+            </form>
+        </section>
+        <hr class="mx-auto my-[3ch]" />
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-orange-500 text-gray-700 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <!-- flex container for the footer, column for mobile and row with items at flex start, 
+           justify-between(content and space between) the text for medium+ -->
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl md:text-xl font-bold"> Socials: </h2>
+                    <ul class="mt-4 flex space-x-4">
+                        <li class="mt-4 mb-2">
+                            <a href="www.linkedin.com/in/kjersheim" target="_blank" class="flex items-center text-gray-700 hover:text-gray-100">
+                                <img src="./images/linkedin logo_icon.svg" alt="LinkedIn" class="h-6 w-6 inline">
+                                <span class="ml-2">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="mt-4 mb-2">
+                            <a href="https://mastodon.social/@Kjersheim" target="_blank" class="flex items-center text-gray-700 hover:text-gray-100">
+                                <img src="./images/mastodon_icon.svg" alt="Mastodon" class="h-6 w-6 inline">
+                                <span class="ml-2">Mastodon</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- some text about the page, center but left aligned when space-between from the above applies on md+ -->
+                <div class="text-center md:text-left">
+                    <p class="text-lg md:text-sm">Testing Tailwind @Kjersheim</p>
+                    <p class="mt-2 text-lg md:text-sm">© 2024 //Kjersheim. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

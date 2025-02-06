@@ -1,0 +1,320 @@
+/*
+Based on Kevin Powell's Learn Grid Course
+Reference: https://github.com/kevin-powell/learn-grid-the-easy-way/
+
+Author: Andreas Kjersheim
+Date: September 2024
+*/
+
+:root {
+    /* Primary Colors */
+    --color-primary: 263 55% 52%;
+    
+    /* Secondary Colors */
+    --color-secondary: 217 19% 35%;
+    --color-secondary-dark: 219 29% 14%;
+
+    /* Link Colors*/
+    --color-link: 191 70% 52%;
+    
+    /* Neutral Colors */
+    --color-neutral-light: 0 0% 100%;
+    --color-neutral-medium: 210 46% 95%;
+    --color-neutral-dark: 0 0% 81%;
+    
+    /* Font Settings */
+    --font-primary: "Lato", sans-serif;
+    --font-weight-normal: 500;
+    --font-weight-bold: 600;
+    
+    /* Font Sizes */
+    --font-size-small: 0.6875rem;
+    --font-size-medium: 0.8125rem;
+    --font-size-large: 1.25rem;
+  }
+  
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+  
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+  
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+  
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    display: grid;
+    place-content: center;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-normal);
+    background-color: hsl(var(--color-neutral-medium));
+}
+  
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+  
+/* Headings */
+h1,
+h2,
+h3 {
+    font-weight: var(--font-weight-bold);
+}
+  
+/* Utility classes */
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+    /* Aligning the image/text in the flex box */
+    align-items:center;
+}
+  
+/* Background Colors */
+.bg-primary {
+    background: hsl(var(--color-primary));
+}
+
+.bg-secondary {
+    background: hsl(var(--color-secondary));
+}
+
+.bg-secondary-dark {
+    background: hsl(var(--color-secondary-dark));
+}
+
+.bg-neutral-light {
+    background: hsl(var(--color-neutral-light));
+}
+
+/* Text Colors */
+.text-neutral-light {
+    color: hsl(var(--color-neutral-light));
+}
+
+.text-secondary {
+    color: hsl(var(--color-secondary));
+}
+  
+/* Border */
+.border-primary {
+    border: 2px solid #a775f1;
+}
+ 
+/* Component styles */
+.maingrid {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six'
+        'seven'
+        'eight'
+        'nine'
+        'ten';
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+.main {
+    font-size: var(--font-size-medium);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--color-secondary) / 0.25);
+}
+
+.main:nth-child(1) {
+    grid-area: one;
+}
+.main:nth-child(2) {
+    grid-area: two;
+}
+.main:nth-child(3) {
+    grid-area: three;
+}
+.main:nth-child(4) {
+    grid-area: four;
+}
+.main:nth-child(5) {
+    grid-area: five;
+}
+.main:nth-child(6) {
+    grid-area: six;
+}
+.main:nth-child(7) {
+    grid-area: seven;
+}
+.main:nth-child(8) {
+    grid-area: eight;
+}
+.main:nth-child(9) {
+    grid-area: nine;
+}
+.main:nth-child(10) {
+    grid-area: ten;
+}
+  
+.main .profile-img {
+    width: 5.75rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.main img {
+    width: 1.75rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+  
+.main .name {
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-normal);
+    line-height: 1;
+}
+
+.main p {
+    font-size: var(--font-size-medium);
+    line-height: 1.6;
+    margin:15px 0 15px 0;
+}
+
+.main > p:first-of-type {
+    font-size: var(--font-size-large);
+    line-height: 1.2;
+}
+
+.main > p:last-of-type {
+    opacity: 0.7;
+}
+
+.main a{
+    text-decoration: none;
+    color: inherit;
+}
+  
+article.main a:hover{
+    cursor: pointer;
+    color:hsl(var(--color-link));
+    transition: 0.5s ease;
+}
+
+.main a:visited{
+    color: inherit;
+}
+
+/* Modal Popup */
+.modal {
+    /* Hidden by default */
+    display: none; 
+    position: fixed;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    color: grey;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mini Screens */
+@media screen and (min-width: 33em) {
+    .maingrid {
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+            "seven"
+            "eight"
+            "nine"
+            "ten";
+    }
+}
+
+/* Small Screens */
+@media screen and (min-width: 38em) {
+    .maingrid {
+        grid-template-areas:
+            "one one"
+            "two three"
+            "four five"
+            "six seven"
+            "eight nine"
+            "ten ten";
+    }
+}
+
+/* Medium Screens */
+@media screen and (min-width: 54em) {
+    .maingrid {
+        grid-template-areas:
+            "one one two"
+            "three four five"
+            "six seven eight"
+            "nine ten ten";
+    }
+}
+
+/* Larger Screens */
+@media screen and (min-width: 75em) {
+    .maingrid {
+        grid-template-areas:
+            "one one two three"
+            "four five six seven"
+            "eight eight nine ten"; 
+    }
+}

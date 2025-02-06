@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Typography exercise</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Adding Google fonts with 2 fonts and a selection of weigths.
+        Added example of how I would do it with manually downloaded fonts in the styles.css upper section - commented out -->
+        <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            /* Adding a bit more space using line height to the main articles,
+            for better readability. */
+            main {
+                line-height: 1.8em;
+            }
+            
+            /* Adding an indent on the paragraphs in the first article. Indent
+            appears on the first paragraph but not the following ones. Also removing
+            margin so it doesnt have both indent and a gap. Instead of margin-bottom 
+            I removed margin all together as it gets a margin from the other css. */
+            .paragraph-indent p {
+                text-indent: 1em;
+                margin: 0;
+                }
+            .paragraph-indent p:first-of-type {
+                text-indent: 0;
+                }
+            .text-center {
+                text-align: center;
+            }
+
+            /* Styling for the image and text alignment in the second paragraph */
+            .text-image {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .text-image p {
+                flex: 2;
+                margin-top: 1rem; 
+            }
+
+            .text-image figure {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .text-image figure img {
+                display: block;
+                max-width: 100%;
+            }
+
+            /* Align the caption to the right, and some margin */
+            .text-image figcaption {
+                text-align: right;
+                margin-top: 0.5rem;
+            }
+
+            /* Add some responsiveness for smaller screens */
+            @media (max-width: 1100px) {
+                .text-image {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .text-image figure {
+                    align-items: center;
+                }
+
+                .text-image figcaption {
+                    text-align: center;
+                }
+            }
+
+            /* Article  3, justified text*/
+            .justified {
+                text-align: justify;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <header>
+         <!-- Using the CSS to better suit my style of learning -->
+            <h1 class="main-heading">Hack. Test.<br>Protect.</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Testing Services</a></li>
+                    <li><a href="#">Red Team Ops</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <!-- 
+            CSS file used for font sizes, colors, family
+            Page-Specific style used for the typography changes in the articles
+          -->
+            <article id="article1" class="paragraph-indent">
+                <h2>Cybersecurity Trends</h2>
+                <p>Pitchfork knausgaard migas, swag man braid sriracha you probably haven't heard of them wayfarers sint bruh cray neutral milk hotel. Qui occaecat jean shorts food truck. Minim deserunt blog keffiyeh succulents in selvage PBR&B nisi venmo cupping. Sint offal do, wolf photo booth dolor chillwave affogato. Chillwave aute marxism selvage, gastropub in synth gorpcore green juice readymade art party stumptown. Yes plz kickstarter helvetica kombucha bespoke.</p>
+                <p>PBR&B deserunt pop-up, four dollar toast live-edge chambray shabby chic green juice pitchfork tofu hexagon adaptogen single-origin coffee. Lorem helvetica succulents lo-fi, aliquip single-origin coffee adaptogen meditation cloud bread pork belly. Kombucha biodiesel raw denim, slow-carb sint humblebrag four dollar toast post-ironic tousled heirloom banjo portland normcore echo park chillwave. Pitchfork keffiyeh magna, cupping forage keytar selfies blue bottle non.</p>
+            </article>
+            <article id="article2">
+                <h2>Breaking Through Defenses</h2>
+                <p>Williamsburg bushwick, cred thundercats excepteur banjo 3 wolf moon taiyaki in. Sartorial gochujang la croix hammock dolor, mixtape squid green juice sriracha four loko ramps everyday carry beard VHS intelligentsia. Gorpcore hammock labore mukbang. XOXO praxis non DIY, fingerstache crucifix ea minim hammock.</p>
+                
+                <div class="text-image">
+                    <p>Lomo blog in narwhal lorem jean shorts. Listicle pabst YOLO gastropub chartreuse fixie hot chicken. Ad pour-over direct trade butcher. Knausgaard vaporware gochujang semiotics, consequat cliche godard truffaut blog vice cred aliqua esse neutra. Unicorn la croix hot chicken incididunt tumeric aliquip small batch freegan duis.</p>
+                    <figure>
+                        <img style="width:200px;" src='images/double-helix-svgrepo-com.svg' alt="Double Helix Image"/>
+                        <figcaption>The secrets of DNA.</figcaption>
+                    </figure>
+                </div>
+            </article>
+            <article id="article3" class="justified">
+                <h2>Red Team Strategies</h2>
+                <p>Vibecession elit gochujang 3 wolf moon, +1 offal sed narwhal nisi paleo retro cloud bread hell of. <em>This does indeed look a bit odd!</em> Thundercats bruh retro, fingerstache bicycle rights pop-up helvetica fanny pack. Chartreuse mlkshk Brooklyn, brunch post-ironic drinking vinegar marxism ut authentic <strong>non</strong> activated charcoal migas keytar. Aesthetic ramps retro dolor, asymmetrical craft beer qui PBR&B offal elit solarpunk sus synth. Brooklyn flexitarian stumptown succulents plaid solarpunk crucifix in lumbersexual ut four loko. Air plant mumblecore authentic unicorn, raw denim vinyl small batch umami neutral milk hotel pour-over. Wolf excepteur cillum, non single-origin coffee quinoa selfies.</p>
+            </article>
+            <article id="article4" class="">
+                <h2>Penetration Testing Gone Good</h2>
+                <p>Gentrify vice ex drinking vinegar art party normcore ad skateboard hot chicken venmo consequat. DIY sustainable banjo yr consequat normcore, cronut dolore unicorn fashion axe health goth meh umami prism. Anim YOLO +1, enamel pin yr flexitarian single-origin coffee adaptogen trust fund. Chicharrones excepteur ugh poke brunch, sriracha tote bag unicorn irure occupy biodiesel vibecession. Bitters swag commodo 3 wolf moon ascot poutine truffaut sustainable cray viral DSA retro reprehenderit.</p>
+                <p>Fugiat typewriter wayfarers, next level la croix post-ironic neutral milk hotel etsy four dollar toast id tousled cronut mlkshk deserunt. Pug enamel pin synth jianbing scenester, neutral milk hotel viral food truck. Id you probably haven't heard of them heirloom mumblecore selvage excepteur stumptown ut trust fund laboris aute truffaut authentic velit ex. Master cleanse you probably haven't heard of them yr venmo, cornhole ennui af narwhal brunch in 3 wolf moon cold-pressed. Paleo non eu deserunt pok pok palo santo selfies sus anim locavore enamel pin.</p>
+            </article>
+        </main>
+        <!-- Added some custom names on the footer span and links -->
+        <footer>
+            <span>Stay Connected</span>
+            <ul>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Legal Info</a></li>
+                <li><a href="#">Work With Us</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

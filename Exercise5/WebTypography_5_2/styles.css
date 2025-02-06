@@ -1,0 +1,415 @@
+/*
+#####################
+#### Root Values ####
+#####################
+*/
+:root {
+    /* Adding fonts via Google Fonts */
+    --ff-body: "Frank Ruhl Libre", serif;
+    --ff-heading: "Raleway", sans-serif;
+    
+    /* Setting root colors */
+    --clr-primary-400: hsl(60 100% 50%);
+    --clr-neutral-900: hsl(0 0% 0%);
+    --clr-neutral-100: hsl(0 0% 100%);
+  
+    /* Setting root font-sizes */
+    font-size: 16px; /* 16 default, keeping it here to test changes */
+    --fs-xl: clamp(3.5rem, 8vw + 1rem, 12rem); /* Scalable main heading test, minimum 3.5rem, 12viewwidth + 1rem, max 12rem */
+    --fs-600: 2rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1rem;
+}
+
+/* Increasing font sizes slightly on smaller width */
+@media (min-width: 640px) {
+    :root {
+      --fs-600: 2.5rem;
+      --fs-500: 1.65rem;
+      --fs-400: 1.125rem;
+    }
+  }
+
+/* IF I WERE NOT USING GOOGLE FONTS (Requires download, I did not do that for the exercise) */
+/* 
+Frank Ruhl Libre - Normal 
+@font-face {
+    font-family: 'Frank Ruhl Libre';
+    src: url('/fonts/FrankRuhlLibre-Regular.woff2') format('woff2'),
+         url('/fonts/FrankRuhlLibre-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frank Ruhl Libre';
+    src: url('/fonts/FrankRuhlLibre-Bold.woff2') format('woff2'),
+         url('/fonts/FrankRuhlLibre-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+Frank Ruhl Libre - Italic
+@font-face {
+    font-family: 'Frank Ruhl Libre';
+    src: url('/fonts/FrankRuhlLibre-LightItalic.woff2') format('woff2'),
+         url('/fonts/FrankRuhlLibre-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+Raleway - Normal
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-Regular.woff2') format('woff2'),
+         url('/fonts/Raleway-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-Bold.woff2') format('woff2'),
+         url('/fonts/Raleway-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}  */
+
+
+/* 
+#################################################################
+#### Main reset from Andy Bell's (more) Modern CSS Reset     ####
+#### https://piccalil.li/blog/a-more-modern-css-reset/       ####
+#################################################################
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Commenting out CSS Reset line-hight for the exercise */
+/* Set core body defaults
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+Set shorter line heights on headings and interactive elements
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+} 
+
+Balance text wrapping on headings
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+*/
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/*
+#####################
+#### Main Styles ####
+#####################
+*/
+
+/* Setting up a body with grid template areas */
+body {
+    display: grid;
+    /* 7.5% side margins, 4 equal columns in the center */
+    grid-template-columns: 7.5% 1fr 1fr 1fr 1fr 7.5%; 
+    grid-template-areas: 
+        ". header header header header ."
+        ". main main main main ."
+        ". footer footer footer footer .";
+    gap: 2rem;
+    padding: 2rem;
+}
+
+header {
+    grid-area: header;
+}
+
+/* Also creating a template area specific to be used for the articles */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: auto; 
+    grid-template-areas:
+        "article1 article1 article1 article3"
+        "article2 article2 . article3"
+        "article4 article4 article4 ."; 
+    gap: 2rem;
+}
+#article1 {
+    grid-area: article1;
+}
+#article2 {
+    grid-area: article2;
+}
+#article3 {
+    grid-area: article3;
+}
+#article4 {
+    grid-area: article4;
+}
+
+/* Main heading using the scalable fs-xl root variable. */
+.main-heading {
+    font-size: var(--fs-xl);
+    text-align: right; /* Align right because I like how it looks. Only as a Logo/Heading test. */
+    word-break: nowrap;
+}
+
+/* NAVBAR START */
+nav ul {
+    display: flex; 
+    justify-content: space-between; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul li {
+    flex: 1;
+    /* Some space between the link boxes */
+    margin: 0 0.5rem;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.75rem 1rem; 
+    text-align: center;
+    border: 1px solid var(--clr-neutral-900);
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    transition: background-color 0.3s ease;
+}
+
+/* Add hover effect */
+nav ul li a:hover {
+    background-color: hsl(140, 74%, 43%); /* Slight yellow hover effect */
+}
+/* NAVBAR END */
+
+/* Headings use bold Raleway */
+h1, h2 {
+    font-family: var(--ff-heading);
+    font-weight: 700; /* Bold */
+    margin-bottom: 1rem;
+    grid-column: span 2;
+    line-height: 1.3em; /* Testing different line heights, this one seems ok */
+}
+
+/* Paragraphs use regular Frank Ruhl Libre */
+p {
+    font-family: var(--ff-body);
+    font-weight: 400;
+}
+
+/* Italic styles for emphasis */
+em {
+    font-style: italic;
+}
+
+/* Strong text uses bold Frank Ruhl Libre */
+strong {
+    font-family: var(--ff-body);
+    font-weight: 700;
+}
+
+/* FOOTER START */
+/* Footer Layout */
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid var(--clr-neutral-900);
+    margin-top: 2rem;
+}
+
+footer span {
+    font-weight: 700;
+}
+
+footer ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer a {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--clr-neutral-900);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+/* FOOTER END */
+
+/* Article layout for High resolutions*/
+@media (min-width: 1900px){
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        grid-auto-rows: auto; 
+        grid-template-areas:
+            "article1 article1 article1 article3"
+            "article2 article2 . article3"
+            "article4 article4 article4 ."; 
+        gap: 2rem;
+    }
+}
+
+/* Article layout for Medium resolution */
+@media (max-width: 1500px){
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        grid-auto-rows: auto; 
+        grid-template-areas:
+            "article1 article1 article3 article3"
+            "article2 article2 article3 article3"
+            "article4 article4 article4 ."; 
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Slightly smaller side margins, 2 columns in the center*/
+    body {
+        grid-template-columns: 5% 1fr 1fr 5%; 
+        grid-template-areas: 
+            "header header header header"
+            ". main main ."
+            ". footer footer .";
+    }
+    /* One column for content */
+    main {
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+            "article1"
+            "article2"
+            "article3"
+            "article4";
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer ul {
+        margin-top: 1rem;
+    }
+}
+
+/* Nav and Footer changes for the tiniest of screens */
+@media (max-width: 610px) {
+    
+    nav {
+        flex-direction: column;
+        text-align:center;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    nav li {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    nav a {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.75rem;
+        display: block;
+        min-height: 3rem;
+    }
+  
+    nav ul li a:hover {
+        background-color: hsl(140, 74%, 43%);
+        color: var(--clr-neutral-900);
+        transform: scale(1.02);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align:center;
+    }
+    footer ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    footer li {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+    footer a {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.75rem;
+        display: block;
+        min-height: 3rem;
+    }
+}
+
+

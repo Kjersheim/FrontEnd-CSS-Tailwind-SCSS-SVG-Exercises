@@ -1,0 +1,79 @@
+@import url(./variables.css);
+
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: var(--main-title-padding);
+    margin: var(--main-title-margin);
+}
+
+.main-title {
+    font-family: var(--headline-font);
+    color: var(--main-title-color);
+    font-size: var(--font-size-xl);
+    text-align: left;
+    margin: var(--main-title-margin);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    margin: 2em; 
+    line-height: 1.4em;
+}
+
+.card {
+    margin: 30px;
+    width: var(--card-width);
+    padding: var(--card-padding);
+    margin: var(--card-margin);
+    background-color: var(--card-bg-color);
+    box-shadow: var(--card-shadow-h-offset) 
+                var(--card-shadow-v-offset) 
+                var(--card-shadow-blur) 
+                var(--card-main-color);  
+                /* Adding a balance text-wrap for smoother when changing resolution*/
+                text-wrap: var(--card-text-wrap-balanced);
+    
+}
+
+/* Testing mobile first, and adding a media query for
+ medium screen styles */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 40px; 
+        gap: 2em;
+    }
+
+    .main-title {
+        margin: 20px 0;
+    }
+}
+
+/* Large screen sizes, resolutions over 1500px */
+@media (min-width: 1500px) {
+
+    .container {
+        flex-direction: row;
+        justify-content:flex-start;
+        padding: 40px 80px; 
+        gap: 3em; 
+    }
+
+    .card {
+        width: 40%;
+        max-width: 550px; 
+    }
+
+    .main-title {
+        margin: 40px 0;
+    }
+}

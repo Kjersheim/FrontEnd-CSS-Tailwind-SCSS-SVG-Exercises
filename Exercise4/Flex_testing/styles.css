@@ -1,0 +1,35 @@
+
+.parent{
+    min-height: 300px;
+    border: 3px dotted brown;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    /* justify-content: center;
+    align-items: start;
+    flex-direction: column-reverse; */
+}
+
+.child{
+    background-color: darkgoldenrod;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+.child:nth-child(2){
+    background: pink;
+
+    order:4;
+}
+
+.child:nth-child(3){
+    background: darkmagenta;
+    /* flex: 0 1 auto; */
+    /* align-self:end; */
+}
+
+.child:nth-child(4){
+    background: darkgreen;
+}

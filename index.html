@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- My stylesheet -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Kjersheim - Web Visualization Projects</title>
+</head>
+<body>
+    <main class="maingrid">
+        <article class="grid-col-span-2 main flow bg-primary text-neutral-light ">
+            <div class="flex">
+                <div>
+                    <img class="profile-img" src="./media/img/AndreasProfileCircular.png" alt="Andreas Kjersheim">
+                </div>
+                <div>
+                    <h2 class="name">Andreas Kjersheim - Web Visualizations</h2>
+                </div>
+            </div>
+            <p>The following page is intended to be used as a hub for a course in web visualizations.</p>
+            <p>As more exercises are completed, more boxes will be functional. Introducing each topic will be a brief comment describing my initial thoughts or previous use.</p>
+        </article>
+        <article class="main flow bg-secondary text-neutral-light">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-2.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">Semantic HTML5 & Responsive Design</h2>
+                </div>
+            </div>
+            <p>Adding structure to a web page sounds positive, maybe users with screenreaders get a better experience!</p>
+            <p>Secondly, updating my knowledge of responsiveness with more modern methods. 
+            </p>
+            <!-- Modal Popup Task 1 -->
+            <a href="#" id="open-modal-1"> Read more!</a>
+            <div id="modal-1" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" id="close-modal-1">&times;</span>
+                    <p>The first exercise was predominantly refreshing information regarding semantic elements in HTML and answering a quiz on the Moodle platform.</p>
+                    <p>As a second part, going through a tutorial from the "Net Ninja" on Responsive Design dated in 2015 was still helpful and a good
+                    reminder of which options we have. For the future I would like to see to what extent this has been updated since. A further description of this section 
+                    is discussed in the learning diary stored in this very repository, updated weekly. <a href="https://ac4938.pages.labranet.jamk.fi/web_visualization/LearningDiary/Learning_diary_AC4938.pdf" target="_blank">(Click here, opens new window!)</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="main flow bg-neutral-light text-secondary">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-3.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">Responsive Images</h2>
+                </div>
+            </div>
+            <p>Exploring responsive design, resolution & images, DPI differences and getting the most optimized pictures depending on devices!</p>
+            <a href="./Exercise3/ResponsivePage/responsive.html" target="_blank">Part One: Responsive Page</a>
+            <br>
+            <a href="./Exercise3/ResponsiveImages/responsive.html" target="_blank">Part Two: Responsive Images</a>
+        </article>
+        <article class="main flow bg-secondary text-neutral-light">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-4.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">CSS3 Flexbox & Grid</h2>
+                </div>
+            </div>
+            <p>This exercise was a fully external one where I completed a grid and a flexbox game. Documented in the learning diary!</p>
+            <a href="./Exercise4" target="_blank">Material Exercises: Root folder Link here </a>
+        </article>
+        <article class="main flow bg-neutral-light text-secondary">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-5.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">Web Typography</h2>
+                </div>
+            </div>
+            <p>The first part of this was a general introduction to various properties such as line-height, alignment, justification and so on. Described in the learning diary!</p>
+                <a href="./Exercise5\WebTypography_5_1" target="_blank">Part 1: Root folder Link here </a><br>
+                <a href="./Exercise5\WebTypography_5_2/index.html" target="_blank">Part 2: Focus on text</a>
+        </article>
+        <article class="main flow bg-secondary text-neutral-light">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-6.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">CSS3 Newest Features</h2>
+                </div>
+            </div>
+            <p>The first section explores variables on a simple page, using imported variables and making use of these.</p>
+            <a href="./Exercise6\Exercise6.2\index.html" target="_blank">Link to the variables page here!</a>
+            <p>The second part of this section was reviewing newer CSS3 features, while presenting and exploring these with our peers. The format of
+                these discussions was a forum, and wont be added to this page. A summary of my chosen review can be read in the popup below!
+            </p>
+            <!-- Modal Popup Task 6-->
+            <a href="#" id="open-modal-6"> Read more!</a>
+            <div id="modal-6" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" id="close-modal-6">&times;</span>
+                    <p>While checking the latest features, I also noticed that an older feature was finally also supported by Chrome late 2023, and Safari not too long before that. One of the challenges I might face from now and then is consistency in content that should be consistent and similar. Examples could be a blog or page of some sort that shows articles, recipes or similar that dont need to have very different layout, and rather often can go out of hand on nesting grids.</p>
+                    <p><strong>Subgrid</strong> is a grid-template option that inherits the cols and rows from its parent. Usually when creating a grid, only the direct children gets placed within a grid, and next line would follow a flow which often might get messy. Instead of nesting grids to match, use subgrid!</p>
+                    <p>I would not use subgrid for everything, but in cases where we have uniform layouts for a section, it could be advantageous to maybe even sit back and consider to increase the complexity of the main grid structure of the page, as this can help give more freedom to aligning objects/elements as you would like them</p>
+                </div>
+            </div>
+        </article>
+        <article class="main flow bg-neutral-light text-secondary">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-7.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">CSS3 Pre-Processors</h2>
+                </div>
+            </div>
+            <p>Following a NetNinja tutorial, creating a CSS Library called Shinobi.</p>
+            <!-- Modal Popup Task 7-->
+            <a href="#" id="open-modal-7"> Read more!</a><br>
+            <div id="modal-7" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" id="close-modal-7">&times;</span>
+                    <p>Despite being soon outdated and the material page linked to blog posts suggesting not to use it, I decided to go through the NetNinja tutorial to explore what SASS is all about. After the first three lessons, I became frustrated with a deprecation warning in the terminal while running Gulp. This warning highlighted the transition from the initial gulpfile.js to gulpfile.mjs, which required updating the import syntax for Dart Sass to import * as sass from 'sass' and switching to a modern module format.</p>
+                    <p>This change provided better compatibility with ECMAScript modules and also allowed for the direct compilation of SCSS files without relying on the deprecated JS API. Additionally, I updated the Sass syntax to utilize @use instead of @import, in some locations. This transition required that all references to variables be prefixed with the module name (e.g., variables.$primary), which enhances code organization and helps avoid naming conflicts.</p>
+                    <p>To further improve the Gulp setup, the tutorial incorporated the gulp-purgecss plugin to remove unused CSS from the final output (which was a relief) based on the HTML files present in my project. This addition helps optimize the size of the generated CSS file, ensuring that only the styles in use are included. As I continue to work through the tutorial, I am gaining a deeper understanding of Sass, its features, and how to manage CSS effectively in modern web development.</p>
+                </div>
+            </div>
+            <a href="Exercise7\SASS_tutorial\index.html" target="_blank">Link to the CSS Library</a><br>
+            <a href="Exercise7\SASS_tutorial\homepage.html" target="_blank">Example page using the library</a><br>
+            <p><strong>Tutorial #2 SASS Crashcourse</strong></p>
+            <p> While I did spent most of the time on the initial tutorial, I got a chance to use Vite to host and build a small project in the SASS Crashcourse.</p>
+            <a href="./Exercise7/Exercise7_2/sass-crashcourse/index.html" target="_blank">SASS Crashcourse Page</a><br>
+            
+            
+        </article>
+        <article class="main flow bg-secondary text-neutral-light">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-8.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">CSS3 Libraries</h2>
+                </div>
+            </div>
+            <p><strong>Tailwind CSS</strong></p>
+            <p> While previously thinking SASS was a nice tool to create components and organize the code as well as quickly create loops for certain things needed,
+                I thought that most likely SASS would not be something I'd use much in smaller projects. However, diving into Tailwind for a few days gave another
+                dimension to what I figured SASS could be used for. Tailwind was really quick to get a hang on, but the spam of classes speaks for itself. The simplicity of 
+                working in the same document for a small project can be very efficient! Getting used to the general classes within the library made general setup quick. Spending
+                time on the more intricate tested methods were a bit more tricky but - with the intellisense giving the CSS code on hover made it more understandable to use, perhaps
+                easier than SASS. 
+            </p>
+            <p>While the below project is a very basic site created using Tailwindcss as CDN, setting up a proper project and using a framework could be a great next step, to
+                further test the opportunities within. 
+            </p>
+            <a href="./Exercise8/Exercise8_2/index.html" target="_blank">Open the page created using tailwind!</a><br>
+
+        </article>
+        <article class="main flow bg-neutral-light text-secondary">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-9.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">CSS3 Animations</h2>
+                </div>
+            </div>
+            <p>Transitions and animations in CSS add dynamic, interactive elements to web design by smoothly changing properties like color, size, or position over a specified duration.</p>
+            <p> 
+            While transitions respond to user interactions (like hovering or clicking), animations allow continuous, complex movements, making designs more engaging and visually appealing.
+            At this time in the late fall, the time was a major setback. While I spent time going through different tutorials and checking resources online, the time available for the end 
+            exercise was very tight.</p>
+
+            <a href="./Exercise9/Exercise9_2/index.html" target="_blank">Open up the animation page!</a><br>
+        </article>
+        <article class="main flow bg-secondary text-neutral-light">
+            <div class="flex">
+                <div>
+                    <img src="./media/img/number-10.png" alt="Source: https://www.flaticon.com/free-icon/">
+                </div>
+                <div>
+                    <h2 class="name">SVG Illustrations</h2>
+                </div>
+            </div>
+            <p> Creating SVGs in Inkscape and testing them in Notepad++ or Visual Studio Code requires time - and creativity. </p> 
+                Going through tutorials and mostly spending time testing to create figures that are symmetrical and in the way I envisioned them, 
+                taught me how important it is to maintain control over every object and path. Hidden or unused symbols can clutter the file and
+                cause unexpected issues. By cleaning the SVG structure and testing changes directly in the code, I ensure that every detail—whether visible or 
+                not—behaves as intended. It’s a meticulous process, but it makes animations smoother and the final output much more reliable.</p>
+    
+            <a href="./Exercise10/index.html" target="_blank">Open up the SVG page!</a><br>
+
+            
+        </article>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
